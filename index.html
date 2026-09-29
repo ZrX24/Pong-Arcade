@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pong Arcade</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">ARCADE / 01</p>
+        <h1>Pong</h1>
+      </div>
+      <p class="status" id="status">First to 7</p>
+    </header>
+
+    <section class="scoreboard" aria-label="Scoreboard">
+      <div class="score-block player-score">
+        <span class="score-label">YOU</span>
+        <strong id="playerScore">0</strong>
+      </div>
+      <div class="score-divider">:</div>
+      <div class="score-block cpu-score">
+        <span class="score-label">CPU</span>
+        <strong id="computerScore">0</strong>
+      </div>
+    </section>
+
+    <section class="court-wrap">
+      <canvas id="gameCanvas" width="960" height="540" aria-label="Pong game court"></canvas>
+      <div class="game-message" id="gameMessage" hidden>
+        <p id="messageText">Game over</p>
+        <button id="restartButton" type="button">Play again</button>
+      </div>
+    </section>
+
+    <footer class="controls">
+      <span><kbd>W</kbd><kbd>S</kbd> or <kbd>↑</kbd><kbd>↓</kbd> move paddle</span>
+      <span>Move mouse over the court to play</span>
+    </footer>
+  </main>
+
+  <script src="error-handler.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
