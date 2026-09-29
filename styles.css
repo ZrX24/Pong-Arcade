@@ -1,0 +1,192 @@
+:root {
+  color-scheme: dark;
+  --ink: #f5f3eb;
+  --muted: #8d918e;
+  --court: #151918;
+  --line: #3e4843;
+  --accent: #f2c14e;
+  --accent-soft: #b4dfb3;
+  --page: #0b0e0d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 800px;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: var(--page);
+  color: var(--ink);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+
+.game-shell {
+  width: 100%;
+  max-width: 772px;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-header,
+.controls,
+.scoreboard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.game-header {
+  margin-bottom: 4px;
+}
+
+.eyebrow,
+.status,
+.score-label,
+.controls {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  margin: 0 0 2px;
+  color: var(--accent);
+  font-size: 0.65rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  line-height: 0.9;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.status {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+.scoreboard {
+  justify-content: center;
+  gap: 36px;
+  margin: 6px 0;
+}
+
+.score-block {
+  display: grid;
+  gap: 2px;
+}
+
+.score-label {
+  font-size: 0.65rem;
+}
+
+.score-block strong {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 0.9;
+}
+
+.player-score {
+  text-align: right;
+}
+
+.player-score .score-label {
+  color: var(--accent-soft);
+}
+
+.cpu-score .score-label {
+  color: var(--accent);
+}
+
+.score-divider {
+  align-self: end;
+  padding-bottom: 2px;
+  color: var(--line);
+  font-size: 1.8rem;
+}
+
+.court-wrap {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--court);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  cursor: crosshair;
+}
+
+.game-message {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 14px;
+  background: rgba(11, 14, 13, 0.88);
+  text-align: center;
+}
+
+.game-message[hidden] {
+  display: none;
+}
+
+.game-message p {
+  margin: 0;
+  font-size: 2rem;
+}
+
+button {
+  border: 1px solid var(--accent);
+  padding: 10px 18px;
+  background: var(--accent);
+  color: #151918;
+  font: 700 0.75rem 'Courier New', monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+  background: var(--ink);
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.controls {
+  gap: 16px;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.65rem;
+}
+
+kbd {
+  display: inline-block;
+  min-width: 18px;
+  margin-right: 2px;
+  padding: 2px 4px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  text-align: center;
+}
