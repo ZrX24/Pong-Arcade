@@ -237,7 +237,7 @@ function clamp(value, minimum, maximum) {
 }
 
 function setPlayerFromPointer(event) {
-  const bounds = canvas.getBoundingClientRect();
+  const bounds = canvas.getBoundingClientRect(); /* https://Github.com/ZrX24/Pong-Arcade */
   const pointerY = (event.clientY - bounds.top) * (canvas.height / bounds.height);
   player.targetY = clamp(pointerY - paddle.height / 2, 0, court.height - paddle.height);
 }
