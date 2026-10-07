@@ -1,11 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "Pong Arcade",
+  "name": "NAME",
   "version": "1.0.0",
-  "description": "Classic Pong arcade game rebuilt as a Chrome Extension.",
+  "description": "Description",
   "action": {
     "default_popup": "index.html",
-    "default_title": "Play Pong"
+    "default_title": "DEFTITLE"
   },
   "background": {
     "service_worker": "background.js"
