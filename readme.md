@@ -99,3 +99,7 @@ Tot el codi (HTML, CSS i JS) s'executa íntegrament des del paquet local de l'ex
 ## 📜 Llicència
 
 Aquest projecte es distribueix sota la llicència MIT. Consulta el fitxer de llicència per a més detalls.
+
+Chrome Extension ID: "nalpjohekiimhokiapmjcopdelkoonfm"
+Dev: Pixelgunerd3YT@Gmail.com
+Editor: ZrX
